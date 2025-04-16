@@ -34,6 +34,12 @@ def validate_mobile_number(mobile_number):
 
 def validate_password(password):
 
+    """
+    Function validates the given password and checks whether the password is following the rules
+    :param password:
+    :return: bool value based on the condition matches
+    """
+
     #usecase-5
     if len(password)<8:
         return False
@@ -45,8 +51,12 @@ def validate_password(password):
     #usecase-7
     if not re.search(r"\d", password):
         return False
-    
 
+    # usecase-8
+    if len(re.findall(r"[!@#$%^&*()_+=\-{}\[\]:;\"'<>,.?/]", password)) != 1:
+        return False
+
+    return True
 
 First_Name = input("Enter your first name :")
 validate_first_and_last_name(First_Name)

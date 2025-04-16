@@ -1,6 +1,5 @@
 import re
 
-
 def validate_first_and_last_name(First_Name):
     """
     Function to validate the first and last name
@@ -35,9 +34,17 @@ def validate_mobile_number(mobile_number):
 
 def validate_password(password):
 
-    # usecase-5
-    if len(password) < 8:
+    #usecase-5
+    if len(password)<8:
         return False
+
+    #usecase-6
+    if not re.search(r"[A-Z]", password):
+        return False
+
+    
+
+
 
 
 First_Name = input("Enter your first name :")

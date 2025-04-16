@@ -1,6 +1,8 @@
+.idea
 __pycache__
 .pytest_cache
+test_data.py
 
 test_success.log
-test_validation_errors.log
 validation_test_data.json
+test_validation_errors.log

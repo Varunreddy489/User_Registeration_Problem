@@ -21,6 +21,20 @@ def validate_email_id(mail):
     return bool(re.fullmatch(pattern, mail))
 
 
+def validate_mobile_number(mobile_number):
+    """
+    Validate the given mobile number is valid or not
+    :param mobile_number:
+    :return: bool value based on the condition matches
+    """
+    pattern = r"^91\s[6-9]\d{9}"
+
+    return bool(re.fullmatch(pattern, mobile_number))
+
+
+
+
+
 
 First_Name = input("Enter your first name :")
 
@@ -30,7 +44,9 @@ last_name = input("Enter your last name :")
 
 validate_first_and_last_name(last_name)
 
-
 mail_id = input("Enter your mail id: ")
 
 validate_email_id(mail_id)
+
+mobile_number = input("Enter your mobile number: ")
+validate_mobile_number(mobile_number)

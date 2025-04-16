@@ -42,21 +42,19 @@ def validate_password(password):
     if not re.search(r"[A-Z]", password):
         return False
 
+    #usecase-7
+    if not re.search(r"\d", password):
+        return False
     
 
 
-
-
 First_Name = input("Enter your first name :")
-
 validate_first_and_last_name(First_Name)
 
 last_name = input("Enter your last name :")
-
 validate_first_and_last_name(last_name)
 
 mail_id = input("Enter your mail id: ")
-
 validate_email_id(mail_id)
 
 mobile_number = input("Enter your mobile number: ")
